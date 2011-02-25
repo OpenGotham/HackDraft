@@ -18,7 +18,7 @@ require 'capybara/session'
 require 'cucumber/rails/capybara_javascript_emulation' # Lets you click links with onclick javascript handlers without using @culerity or @javascript
 require 'akephalos'
 require 'fabrication'
-require File.expand_path(File.dirname(__FILE__) + '/../../spec/fabricators')
+#require File.expand_path(File.dirname(__FILE__) + '/../../spec/fabricators')
 
 # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
 # order to ease the transition to Capybara we set the default here. If you'd

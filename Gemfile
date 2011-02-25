@@ -24,8 +24,7 @@ group :development, :test do
   gem 'fabrication'
 end
 group :test do
-  #gem 'ruby-fsevent', :git => 'git://github.com/sandro/ruby-fsevent.git', :branch => 'mri-friendly' 
-  gem 'testify'
+  gem 'watchr'
   gem 'akephalos'
 end
 

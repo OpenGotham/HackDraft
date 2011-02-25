@@ -9,8 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.invitable
       # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
       # t.token_authenticatable
-
-
+      t.string :name
       t.timestamps
     end
 

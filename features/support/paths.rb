@@ -10,26 +10,38 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /delight/
+      root_path
+    when /hacks/
+      hacks_path
+    when /my page/
+      user_root_path
+ #when /invite acceptance/
+     # '/users/invitation/accept'
 
+       #@user = User.where(:invitation_token => $1 ).first
+
+         #when 
     # the following are examples using path_to_pickle
 
-    when /^#{capture_model}(?:'s)? page$/                           # eg. the forum's page
-      path_to_pickle $1
+    #when /^#{capture_model}(?:'s)? page$/                           # eg. the forum's page
+      #path_to_pickle $1
 
-    when /^#{capture_model}(?:'s)? #{capture_model}(?:'s)? page$/   # eg. the forum's post's page
-      path_to_pickle $1, $2
+    #when /^#{capture_model}(?:'s)? #{capture_model}(?:'s)? page$/   # eg. the forum's post's page
+      #path_to_pickle $1, $2
 
-    when /^#{capture_model}(?:'s)? #{capture_model}'s (.+?) page$/  # eg. the forum's post's comments page
-      path_to_pickle $1, $2, :extra => $3                           #  or the forum's post's edit page
+    #when /^#{capture_model}(?:'s)? #{capture_model}'s (.+?) page$/  # eg. the forum's post's comments page
+      #path_to_pickle $1, $2, :extra => $3                           #  or the forum's post's edit page
 
-    when /^#{capture_model}(?:'s)? (.+?) page$/                     # eg. the forum's posts page
-      path_to_pickle $1, :extra => $2                               #  or the forum's edit page
+    #when /^#{capture_model}(?:'s)? (.+?) page$/                     # eg. the forum's posts page
+      #path_to_pickle $1, :extra => $2                               #  or the forum's edit page
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+      #
 
     else
       begin
@@ -41,7 +53,7 @@ module NavigationHelpers
           "Now, go and add a mapping in #{__FILE__}"
       end
     end
-  end
+   end
 end
 
 World(NavigationHelpers)

@@ -2,9 +2,14 @@
 Feature: invited hopefull can register
   As a invited hopeful I want to register
   so that I can be a player
+  
+  Scenario: Hopeful accepts invitation
 
-  Scenario: hopeful with invite can complete registration
-  Given I am on new_user_registration
-  When I fill the required fields
-  And I submit 'register'
-  Then I should be on hacks
+    #Given the following user:
+    When I accept my invitation
+    Then I should see "Set your password" 
+    
+  Scenario: hopeful confirms account
+
+    When I confirm my account
+    Then I should see "much rejoicing"

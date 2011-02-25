@@ -1,7 +1,13 @@
 HackDraft::Application.routes.draw do
-  get "welcome/index"
+    
+  resources :hacks
 
-  devise_for :users
+  get "welcome/index"
+  
+  devise_for :users do
+    get 'users', :to => 'users#show', :as => :user_root
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
