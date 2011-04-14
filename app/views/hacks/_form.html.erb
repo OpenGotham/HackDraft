@@ -11,8 +11,12 @@
   <div class="field">
      <%= f.label 'upload stack' %>
 
-    <%= f.file_field :hack_stack  %>
+     <%= f.file_field :hack_stack  %>
   </div>
+  <div class="field">
+    <%= f.fields_for :hack_slides do|hack_slide_fields| %>
+        content: <%= hack_slide_fields.text_area :content %>
+    <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
