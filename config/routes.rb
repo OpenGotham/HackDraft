@@ -1,5 +1,7 @@
 HackDraft::Application.routes.draw do
     
+  resources :profiles
+
   resources :hacks
 
   get "welcome/index"

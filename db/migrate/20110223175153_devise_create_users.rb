@@ -7,18 +7,16 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.trackable
       t.confirmable
       t.invitable
-      # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
-      # t.token_authenticatable
-      t.string :name
       t.timestamps
-    end
 
+      t.string :name
+      t.integer :profile_id
+    end
+     
     add_index :users, :email,                :unique => true
     add_index :users, :reset_password_token, :unique => true
     add_index :users, :invitation_token, :unique => true
-
-    # add_index :users, :confirmation_token,   :unique => true
-    # add_index :users, :unlock_token,         :unique => true
+    add_index :users, :confirmation_token,   :unique => true
   end
 
   def self.down

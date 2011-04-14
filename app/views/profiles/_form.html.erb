@@ -1,0 +1,20 @@
+<%= form_for(@profile) do |f| %>
+  <div class="field">
+    <%= f.label :professional_title %>
+    <%= f.text_field :professional_title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+
+<% end %>
+
